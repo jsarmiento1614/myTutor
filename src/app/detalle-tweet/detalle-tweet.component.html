@@ -1,0 +1,44 @@
+<div class="container t-container mt-2 ">
+    <div class="card w-100 bg-dark text-white" *ngFor="let Tweets of Tweets">
+      <div class="card-header">
+       <span class="font-weight-bold">Tweets </span> | <span class="font-italic text-primary">Tweets y respuestas </span> <span class="font-weight-bold">| User {{Tweets.userId}} </span> 
+      </div>
+      <div class="hover-card" >
+        <figure class="d-inline-block align-top t-imagen-post">
+            <img src="../../assets/img/twitter-post.png" class="m-4 w-75">
+        </figure>
+        <div class="card-body d-inline-block w-75">
+          <h5 class="card-title font-weight-bold"> {{Tweets.title}} </h5>
+          <p class="card-text"> {{Tweets.body}}</p>
+          <a routerLink="/tweet/all/{{Tweets.userId}}" class="btn btn-primary">Todos los  Tweets</a>
+          <a routerLink="/" class="btn btn-danger ml-4">Volver</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+<div class="container t-container mt-2" *ngFor="let tDetails of tweetDetails">
+  <div class="card w-100">
+    <div class="card-header bg-white">
+
+      <div class="d-flex justify-content-between ">
+        <figure class="d-inline-block align-top t-imagen-post">
+          <img src="../../assets/img/twitter-post.png" class=" w-75">
+        </figure>
+        <span class="font-weight-bold"> UserPost {{tDetails.id}} </span>
+        <div>
+          <a class="btn btn-outline-primary font-weight-bold">Seguir</a>
+        </div>
+      </div>
+    </div>
+    <div class="hover-card">
+      <div class="card-body d-inline-block w-100">
+        <div>
+          <h5 class="card-title font-weight-bold d-inline-block mr-2"> {{tDetails.name}}</h5>
+          <p class="card-text d-inline-block font-italic">( {{tDetails.email}} )</p>
+        </div>
+        <p class="card-text">{{tDetails.body}}</p>
+        
+      </div>
+    </div>
+  </div>

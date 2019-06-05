@@ -1,0 +1,18 @@
+<div class="container t-container mt-2">
+    <div class="card w-100 bg-dark text-white" *ngFor="let Tweets of allTweets">
+      <div class="card-header">
+       <span class="font-weight-bold">Tweets </span> | <span class="font-italic text-primary">Tweets y respuestas </span> <span class="font-weight-bold">| User {{Tweets.userId}} </span> 
+      </div>
+      <div class="hover-card" >
+        <figure class="d-inline-block align-top t-imagen-post">
+            <img src="../../assets/img/twitter-post.png" class="m-4 w-75">
+        </figure>
+        <div class="card-body d-inline-block w-75">
+          <h5 class="card-title font-weight-bold"> {{Tweets.title}} </h5>
+          <p class="card-text"> {{Tweets.body}}</p>
+          <a routerLink="/tweet/{{Tweets.id}}" class="btn btn-primary">Ver Tweet</a>
+          <a routerLink="/" class="btn btn-danger ml-4">Volver</a>
+        </div>
+      </div>
+    </div> 
+  </div>

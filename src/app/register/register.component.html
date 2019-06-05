@@ -1,0 +1,49 @@
+<div class="container style-login">
+    <div class="w-100">
+      <div>
+        <h1 class="title-register">Registra tu Cuenta</h1>
+        <div class="style-figure">
+          <div>
+            <div class="style-person-circle" (click)="selectTypeUser('tutor')" id="tutor">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h2 class="title-type-person">Tutor</h2>
+          </div>
+
+          <div>
+            <div class="style-person-circle ml-2" (click)="selectTypeUser('student')" id="student">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h2 class="title-type-person">Estudiante</h2>
+          </div>
+        </div>
+      </div>
+      <form #form=ngForm (ngSubmit)="onCreateUser();">
+        <div>
+  
+          <div class="form-group">
+            <label >Nombre</label>
+            <input type="text" #name="ngModel" class="form-control" placeholder="Nombre" name="name" [(ngModel)]="userNew.name">
+          </div>
+  
+          <div class="form-group">
+            <label >Correo</label>
+            <input type="email" #email="ngModel" class="form-control" placeholder="email" name="email" [(ngModel)]="userNew.email">
+          </div>
+  
+          <div class="form-group">
+            <label >Contraseña</label>
+            <input type="password" #password="ngModel" class="form-control" placeholder="Password" name="password" [(ngModel)]="userNew.password">
+          </div>
+  
+        </div>
+        <div style="margin-top: 25%;">
+          <button type="submit" class="btn btn-primary w-100">Registrar Cuenta</button>
+        </div>
+        <div style="margin: 5%; text-align: center;">
+            <a routerLink="/">Deseo Iniciar Sesión</a>
+        </div>
+      </form>
+    </div>
+  </div>
+    
