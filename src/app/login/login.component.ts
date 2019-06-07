@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApp } from '../shared/model/user';
 import { Router } from '@angular/router';
+import { NotificationsComponent } from "../notifications/notifications.component";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [NotificationsComponent]
 })
 export class LoginComponent implements OnInit {
   users:Array<UserApp>;
-  constructor(private router: Router) {
+  constructor(private router: Router, private _notification: NotificationsComponent) {
     
     if (localStorage.getItem('users')) {
       let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
@@ -31,6 +33,7 @@ export class LoginComponent implements OnInit {
       this.gotoHome()
    } else {
     console.log("Usuario invalido");
+    this._notification.notificationOpen('error', 'Error!', 'Usuario invalido');
    }
 
   }
