@@ -9,6 +9,7 @@ import { UserService } from '../shared/user.service';
 })
 export class HomeComponent implements OnInit {
   // Tweets:Array<User>;
+  statusSideNav: boolean = true;
   constructor(private userService: UserService) {
       // this.userService = userService;
    }
@@ -20,6 +21,18 @@ export class HomeComponent implements OnInit {
     // },error => {
     //   console.log(`Error ${error}`);
     // });
+  }
+
+  viewSideBar() {
+    this.statusSideNav = true;
+    let sidenav = document.getElementById('side-nav');
+    sidenav.classList.remove('show-side-nav');
+  }
+
+  hideSideBar() {
+    this.statusSideNav = false;
+    let sidenav = document.getElementById('side-nav');
+    sidenav.classList.add('show-side-nav');
   }
 
 }

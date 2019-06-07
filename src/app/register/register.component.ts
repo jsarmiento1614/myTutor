@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserApp } from '../shared/model/user';
 import { UserService } from '../shared/user.service';
 import { userMock } from '../shared/mock/user-mock';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,9 +17,17 @@ export class RegisterComponent implements OnInit {
   SelectedUser: UserApp;
   typeUserSelected:string;
 
-  constructor(private usuarioService:UserService) { 
-    this.users = userMock;
+  constructor(private usuarioService:UserService, private router: Router) { 
+
+    if (localStorage.getItem('users')) {
+      let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
+      this.users = data[0] as Array<UserApp>;
+    } else {
+      this.users = userMock;
+    }
+
     this.usuarioService = usuarioService;
+    console.log(this.users)
     this.createMode = false;
   }
 
@@ -36,22 +45,17 @@ export class RegisterComponent implements OnInit {
     };
   }
   onCreateUser() : void{
-    debugger
-    this.users = [];
+
     this.userNew.typeUser = this.typeUserSelected;
+    this.userNew.userId = this.users.length + 1;
     this.users.push(this.userNew);
-    user:userMock;
-    
-    localStorage.setItem('users', `${this.users}`)
-    // this.usuarioService.crearUser(this.userNew)
-    //   .subscribe((data : UserApp ) =>{
-    //     this.users.push(data);
-    //     this.createMode = false;
-    //   }, error => console.log("error "+ error));
+
+    // Guardo el objeto como un string
+    localStorage.setItem('users', JSON.stringify(this.users));
+    this.gotoLogin();
   }
 
   selectTypeUser(typeUser:string) {
-    debugger
       this.typeUserSelected = typeUser;
       let docTutor = document.getElementById('tutor');
       let docStudent = document.getElementById('student');
@@ -75,6 +79,10 @@ export class RegisterComponent implements OnInit {
         }
       }
      
+  }
+
+  gotoLogin() {
+    this.router.navigate(['/']);
   }
 
 }
