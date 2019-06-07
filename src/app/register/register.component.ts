@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApp } from '../shared/model/user';
 import { UserService } from '../shared/user.service';
-import userMock from '../shared/mock/user-mock';
+import { userMock } from '../shared/mock/user-mock';
 
 
 @Component({
@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   typeUserSelected:string;
 
   constructor(private usuarioService:UserService) { 
+    this.users = userMock;
     this.usuarioService = usuarioService;
     this.createMode = false;
   }

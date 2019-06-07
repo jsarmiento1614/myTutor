@@ -1,13 +1,11 @@
-userMock:[];
-function mockUser() {
-    userMock:[]= [{
-        userId: '',
-        typeUser: '',
-        name: '',
-        email: '',
-        password: ''
-    }]
-}
+import { UserApp } from "../model/user";
 
-
-export default this.userMock;
+export const userMock: UserApp []=[
+    {
+        userId: 1,
+        typeUser: "student",
+        name: 'Jesus',
+        email: "jesus@gmail.com",
+        password: 'js'
+    }
+];
