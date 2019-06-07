@@ -26,7 +26,7 @@ color: white; z-index: 1;"></i>
   </div>
   <ul class="categories">
     <li><i class="fas fa-user cursor"></i><a>Mi cuenta</a></li>
-    <li><i class="fas fa-user-tie"></i><a>Tutores Favoritos</a></li>
+    <li *ngIf="user.typeUser =='student'" ><i class="fas fa-user-tie"></i><a>Tutores Favoritos</a></li>
     <li><i class="fas fa-comment-dots"></i><a> Messages <span class="num dang">56</span></a></li>
     <li><i class="fa fa-power-off fa-fw"></i><a routerLink="/"> Cerrar Sesion</a></li>
   </ul>
@@ -39,8 +39,8 @@ color: white; z-index: 1;"></i>
       <div class="row">
         <div class="col-md-12">
           <div class="content">
-            <h2>Welcome to Dashboard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <h2>Bienvenido a My Tutor</h2>
+            <p>Somos una plataforma de educacion Online, brindando solucion a tus dudas a través de tutorias.</p>
           </div>
         </div>
       </div>
@@ -74,77 +74,6 @@ color: white; z-index: 1;"></i>
             <div class="info">
               <h3>5,245</h3> <span>Users</span>
               <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="admins">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box">
-            <h3>Admins:</h3>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148906966/small/1501685402/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <h3>Moderators:</h3>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="admin">
-              <div class="img">
-                <img class="img-responsive" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="admin">
-              </div>
-              <div class="info">
-                <h3>Joge Lucky</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -186,8 +115,6 @@ color: white; z-index: 1;"></i>
       </div>
     </div>
   </section>
- 
 
-  
 </section>
 
