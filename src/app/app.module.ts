@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AllTweetUserComponent } from './all-tweet-user/all-tweet-user.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 const appRoutes: Routes = [
   {
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     AllTweetUserComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
