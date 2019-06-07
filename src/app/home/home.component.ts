@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { User } from '../shared/model/user';
 import { UserService } from '../shared/user.service';
+import { ActivatedRoute } from '@angular/router';
+import { UserApp } from '../shared/model/user';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +12,21 @@ import { UserService } from '../shared/user.service';
 export class HomeComponent implements OnInit {
   // Tweets:Array<User>;
   statusSideNav: boolean = true;
-  constructor(private userService: UserService) {
-      // this.userService = userService;
-   }
+  usersList:Array<UserApp>;
+  user:any;
+  constructor(
+    private userService: UserService, 
+    private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // this.userService.getTweetsUser()
-    // .subscribe((data : Array<User>) =>{
-    //   this.Tweets = data.slice(0,50);
-    // },error => {
-    //   console.log(`Error ${error}`);
-    // });
+    let id = this.route.snapshot.paramMap.get('id');
+    if (localStorage.getItem('users')) {
+      let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
+      this.usersList = data[0] as Array<UserApp>;
+      this.user = this.usersList.find(f => f.userId === Number(id));
+    } 
+
+    console.log(this.user)
   }
 
   viewSideBar() {

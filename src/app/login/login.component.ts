@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
    let userEntry = this.users.find(f => f.email === email && f.password === password);
    if(userEntry) {
       // Email y pass correctamente
-      this.gotoHome()
+      this.gotoHome(userEntry)
    } else {
     console.log("Usuario invalido");
     this._notification.notificationOpen('error', 'Error!', 'Usuario invalido');
@@ -38,8 +38,8 @@ export class LoginComponent implements OnInit {
 
   }
 
-  gotoHome() {
-    this.router.navigate(['/home']);
+  gotoHome(user: any) {
+    this.router.navigate(['/home', { id: user.userId }]);
   }
 
 

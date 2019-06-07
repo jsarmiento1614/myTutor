@@ -499,3 +499,7 @@ div.container-header{
     }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: transparent !important}
   }
+
+  .cursor {
+    cursor: pointer !important;
+  }

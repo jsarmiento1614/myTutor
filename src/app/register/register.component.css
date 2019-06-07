@@ -12,7 +12,7 @@ div.style-figure {
 }
 
 div.style-person-circle {
-    background: #ccc;
+    background: #cccccc26;
     border-radius: 50%;
     font-size: 2rem;
     display: flex;
@@ -35,5 +35,5 @@ h2.title-type-person {
 }
 
 div.style-circle {
- background: yellow
+ background: #007BFF
 }
