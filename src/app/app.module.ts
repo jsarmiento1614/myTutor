@@ -15,6 +15,7 @@ import { AllTweetUserComponent } from './all-tweet-user/all-tweet-user.component
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ]
@@ -52,7 +57,8 @@ const appRoutes: Routes = [
     AllTweetUserComponent,
     LoginComponent,
     RegisterComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
