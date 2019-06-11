@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 const appRoutes: Routes = [
   {
@@ -43,6 +44,10 @@ const appRoutes: Routes = [
     component: ProfileComponent
   },
   {
+    path: 'chat',
+    component: ChatComponent
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ]
@@ -58,7 +63,8 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     NotificationsComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
