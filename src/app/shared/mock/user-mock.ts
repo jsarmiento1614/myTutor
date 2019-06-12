@@ -3,7 +3,7 @@ import { UserApp, TutorApp } from "../model/user";
 export const userMock: UserApp []=[
     {
         userId: 1,
-        typeUser: "student",
+        typeUser: "tutor",
         name: 'Jesus',
         email: "jesus@gmail.com",
         password: 'js'
