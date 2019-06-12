@@ -13,3 +13,13 @@ export class UserApp {
     email: string;
     password: string;
 }
+
+export class TutorApp {
+    userId: number;
+    typeUser: string;
+    name: string;
+    email: string;
+    password: string;
+    description: string;
+    workPlace: string;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserApp } from '../shared/model/user';
+import { UserApp, TutorApp } from '../shared/model/user';
 import { UserService } from '../shared/user.service';
-import { userMock } from '../shared/mock/user-mock';
+import { userMock, tutorMock } from '../shared/mock/user-mock';
 import { Router } from '@angular/router';
 
 
@@ -12,18 +12,22 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   userNew: UserApp;
-  users:Array<UserApp>;
-  createMode : boolean;
+  users: Array<UserApp>;
+  createMode: boolean;
   SelectedUser: UserApp;
-  typeUserSelected:string;
+  typeUserSelected: string;
+  tutor: Array<TutorApp>
+  tutorNew: TutorApp;
 
-  constructor(private usuarioService:UserService, private router: Router) { 
+  constructor(private usuarioService: UserService, private router: Router) {
 
     if (localStorage.getItem('users')) {
       let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
       this.users = data[0] as Array<UserApp>;
+      this.tutor = data[0] as Array<TutorApp>;
     } else {
       this.users = userMock;
+      this.tutor = tutorMock;
     }
 
     this.usuarioService = usuarioService;
@@ -33,52 +37,71 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.initialDataUser();
+    this.initialDataTutor();
   }
 
   initialDataUser() {
     this.userNew = {
       userId: 0,
       typeUser: '',
-      name:  '',
-      email:  '',
-      password:  '',
+      name: '',
+      email: '',
+      password: '',
     };
   }
-  onCreateUser() : void{
 
-    this.userNew.typeUser = this.typeUserSelected;
-    this.userNew.userId = this.users.length + 1;
-    this.users.push(this.userNew);
+  initialDataTutor() {
+    this.tutorNew = {
+      userId: 0,
+      typeUser: '',
+      name: '',
+      email: '',
+      password: '',
+      description: '',
+      workPlace: '',
+    };
+  }
+  onCreateUser(): void {
+    if (this.typeUserSelected === 'student') {
+      this.userNew.typeUser = this.typeUserSelected;
+      this.userNew.userId = this.users.length + 1;
+      this.users.push(this.userNew);
+    }
+    if (this.typeUserSelected === 'tutor') {
+      this.tutorNew.typeUser = this.typeUserSelected;
+      this.tutorNew.userId = this.tutor.length + 1;
+      this.tutor.push(this.tutorNew);
+    }
 
     // Guardo el objeto como un string
     localStorage.setItem('users', JSON.stringify(this.users));
     this.gotoLogin();
   }
 
-  selectTypeUser(typeUser:string) {
-      this.typeUserSelected = typeUser;
-      let docTutor = document.getElementById('tutor');
-      let docStudent = document.getElementById('student');
+  selectTypeUser(typeUser: string) {
+    this.typeUserSelected = typeUser;
+    let docTutor = document.getElementById('tutor');
+    let docStudent = document.getElementById('student');
 
-      if(typeUser == 'tutor') {
-        if( docTutor.classList.contains('style-circle')) {
-          docTutor.classList.remove('style-circle');
-          docStudent.classList.add('style-circle');
+    if (typeUser == 'tutor') {
+      if (docTutor.classList.contains('style-circle')) {
+        docTutor.classList.remove('style-circle');
+        docStudent.classList.add('style-circle');
 
-        } else {
-          docTutor.classList.add('style-circle');
-          docStudent.classList.remove('style-circle');
-        }
-      } else if(typeUser == 'student') {
-        if( docStudent.classList.contains('style-circle')) {
-          docStudent.classList.remove('style-circle');
-          docTutor.classList.add('style-circle');
-        } else {
-          docStudent.classList.add('style-circle');
-          docTutor.classList.remove('style-circle');
-        }
+      } else {
+        docTutor.classList.add('style-circle');
+        docStudent.classList.remove('style-circle');
       }
-     
+    } else if (typeUser == 'student') {
+      if (docStudent.classList.contains('style-circle')) {
+        docStudent.classList.remove('style-circle');
+        docTutor.classList.add('style-circle');
+      } else {
+        docStudent.classList.add('style-circle');
+        docTutor.classList.remove('style-circle');
+      }
+    }
+
   }
 
   gotoLogin() {

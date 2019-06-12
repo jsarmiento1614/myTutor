@@ -21,23 +21,52 @@
       <form #form=ngForm (ngSubmit)="onCreateUser();">
         <div>
   
-          <div class="form-group">
+          <div class="form-group" *ngIf="typeUserSelected === 'student'">
             <label >Nombre</label>
             <input type="text" #name="ngModel" class="form-control" placeholder="Nombre" name="name" [(ngModel)]="userNew.name">
           </div>
   
-          <div class="form-group">
+          <div class="form-group" *ngIf="typeUserSelected === 'student'">
             <label >Correo</label>
-            <input type="email" #email="ngModel" class="form-control" placeholder="email" name="email" [(ngModel)]="userNew.email">
+            <input type="email" #email="ngModel" class="form-control" placeholder="Email" name="email" [(ngModel)]="userNew.email">
           </div>
   
-          <div class="form-group">
+          <div class="form-group" *ngIf="typeUserSelected === 'student'">
             <label >Contraseña</label>
             <input type="password" #password="ngModel" class="form-control" placeholder="Password" name="password" [(ngModel)]="userNew.password">
           </div>
+
+          <div class="form-group" *ngIf="typeUserSelected === 'tutor'">
+            <label >Nombre</label>
+            <input type="text" #name="ngModel" class="form-control" placeholder="Nombre" name="name" [(ngModel)]="tutorNew.name">
+          </div>
+  
+          <div class="form-group" *ngIf="typeUserSelected === 'tutor'">
+            <label >Correo</label>
+            <input type="email" #email="ngModel" class="form-control" placeholder="Email" name="email" [(ngModel)]="tutorNew.email">
+          </div>
+  
+          <div class="form-group" *ngIf="typeUserSelected === 'tutor'">
+            <label >Contraseña</label>
+            <input type="password" #password="ngModel" class="form-control" placeholder="Password" name="password" [(ngModel)]="tutorNew.password">
+          </div>
+
+          <div class="form-group" *ngIf="typeUserSelected === 'tutor'">
+            <label >Descripción</label>
+            <input type="text" #description="ngModel" class="form-control" placeholder="Descripción" name="description" [(ngModel)]="tutorNew.description">
+          </div>
+
+          <div class="form-group" *ngIf="typeUserSelected === 'tutor'">
+            <label >Lugar de trabajo</label>
+            <input type="text" #workPlace="ngModel" class="form-control" placeholder="Lugar de trabajo" name="workPlace" [(ngModel)]="tutorNew.workPlace">
+          </div>
   
         </div>
-        <div style="margin-top: 25%;">
+        <div style="margin-top: 25%;" *ngIf="typeUserSelected === 'tutor'"> 
+          <button type="submit" class="btn btn-primary w-100">Registrar Cuenta</button>
+        </div>
+
+        <div style="margin-top: 25%;" *ngIf="typeUserSelected === 'student'"> 
           <button type="submit" class="btn btn-primary w-100">Registrar Cuenta</button>
         </div>
         <div style="margin: 5%; text-align: center;">
