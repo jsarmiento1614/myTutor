@@ -24,9 +24,9 @@ export class HomeComponent implements OnInit {
     if (localStorage.getItem('users')) {
       let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
 
-      // this.usersList = data[0].filter(f => f.typeUser==='student') as Array<UserApp>;
-      // this.tutorList = data[0].filter(f => f.typeUser==='tutor') as Array<TutorApp>;
-      this.user = this.usersList.find(f => f.userId === Number(id));
+      this.usersList = data[0].filter(f => f.typeUser==='student') as Array<UserApp>;
+      this.tutorList = data[0].filter(f => f.typeUser==='tutor') as Array<TutorApp>;
+      this.user = data[0].find(f => f.userId === Number(id));
       
     } 
 

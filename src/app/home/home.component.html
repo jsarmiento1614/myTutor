@@ -87,15 +87,15 @@ color: white; z-index: 1;"></i>
         <div class="row no-gutters">
           <div class="col-md-4" style="    width: 16%;
           display: flex;
-          align-items: center;
-          margin-right: 3%;">
-            <img src="https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png" class="card-img">
+          align-items: center;">
+            <img style="border-radius: 50%; margin: 7%;" src="{{tutor.thumb ? tutor.thumb : 'https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png'}} " class="card-img">
           </div>
           <div class="col-md-8" style="width: 80%;">
-            <div class="card-body">
-              <h5 class="card-title">{{tutor.name}}</h5>
-              <p class="card-text">{{tutor.workPlace}}</p>
-              <button class="btn btn-primary p-1"> <i class="fas fa-envelope"></i> Contactar</button>
+            <div class="card-body m-2">
+              <h5 class="card-title m-2">{{tutor.name}}</h5>
+              <p class="card-text" style="font-size: .9rem; font-weight: 800;">{{tutor.workPlace}}</p>
+              <button id="{{tutor.id}}" (click)="tutor.id" class="btn btn-primary m-1 p-1"> <i class="fas fa-envelope"></i> Contactar</button>
+              <span> <i class="fas fa-heart mr-2"></i> <span style="font-weight: 800">50</span></span>
             </div>
           </div>
         </div>
