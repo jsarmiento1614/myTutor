@@ -1,6 +1,6 @@
 import { UserApp, TutorApp } from "../model/user";
 
-export const userMock: UserApp []=[
+export const userMock: UserApp[] = [
     {
         userId: 1,
         typeUser: "tutor",
@@ -9,15 +9,18 @@ export const userMock: UserApp []=[
         password: 'js'
     },
 ];
-export const tutorMock: TutorApp []=[
+export const tutorMock: TutorApp[] = [
     {
         userId: 1,
         typeUser: "tutor",
         name: 'James',
         email: "James@gmail.com",
         password: 'js',
-        description: '',
-        workPlace: ''
+        description: 'mi descripcion',
+        workPlace: 'Leitz',
+        background: '',
+        thumb: 'https://www.hyland.com/-/media/Hyland/images/in-content/people/executive-headshots/priemer_jacket.jpg?h=300&w=300&la=en&hash=5766972EEF893AABD41DDA703FEBC1CFFFD259C9',
+
     },
     {
         userId: 2,
@@ -26,7 +29,9 @@ export const tutorMock: TutorApp []=[
         email: "Santiago@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', 
+        background: '', 
+        thumb: 'https://www.nestle.com/asset-library/PublishingImages/AboutUs/management/laurent-freixe.jpg',
     },
     {
         userId: 3,
@@ -35,7 +40,7 @@ export const tutorMock: TutorApp []=[
         email: "Andrea@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 4,
@@ -44,7 +49,9 @@ export const tutorMock: TutorApp []=[
         email: "Marco@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', 
+        background: '',
+        thumb: 'https://www.novartis.com/sites/www.novartis.com/files/resize/jay-bradner-big-image-400x400.jpg',
     },
     {
         userId: 5,
@@ -53,7 +60,7 @@ export const tutorMock: TutorApp []=[
         email: "Meliodas@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: 'https://webassets.infor.com/images/leadership/_square/Charles_Phillips_280x280px.jpg?mtime=20180907085638',
     },
     {
         userId: 6,
@@ -62,7 +69,7 @@ export const tutorMock: TutorApp []=[
         email: "Ban@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: 'https://www.adcb.com/about/investorrelations/financialinformation/ARSite/2016/assets/images/5.1_ExecutiveManagement_2.jpg',
     },
     {
         userId: 7,
@@ -71,7 +78,9 @@ export const tutorMock: TutorApp []=[
         email: "Francisco@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', 
+        background: '', 
+        thumb: 'http://activitybasedcity.se/wp-content/uploads/2017/02/Henrik_Henriksson.jpg',
     },
     {
         userId: 8,
@@ -80,7 +89,9 @@ export const tutorMock: TutorApp []=[
         email: "Dimash@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', 
+        background: '', 
+        thumb: 'https://www.sabre.com/wp/wp-content/uploads/ETeam_Headshots_Doug-250x300.jpg',
     },
     {
         userId: 9,
@@ -89,16 +100,16 @@ export const tutorMock: TutorApp []=[
         email: "Alex@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
-     {
+    {
         userId: 10,
         typeUser: "tutor",
         name: 'Carol',
         email: "Carol@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 11,
@@ -107,7 +118,7 @@ export const tutorMock: TutorApp []=[
         email: "Carlos@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 12,
@@ -116,7 +127,7 @@ export const tutorMock: TutorApp []=[
         email: "Deivy@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 13,
@@ -125,7 +136,7 @@ export const tutorMock: TutorApp []=[
         email: "Jorge@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 14,
@@ -134,7 +145,7 @@ export const tutorMock: TutorApp []=[
         email: "CarlosV@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 15,
@@ -143,7 +154,7 @@ export const tutorMock: TutorApp []=[
         email: "serpel@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 16,
@@ -152,7 +163,7 @@ export const tutorMock: TutorApp []=[
         email: "franklinC@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 17,
@@ -161,7 +172,7 @@ export const tutorMock: TutorApp []=[
         email: "DArmando@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 18,
@@ -170,7 +181,7 @@ export const tutorMock: TutorApp []=[
         email: "susana@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 19,
@@ -179,7 +190,7 @@ export const tutorMock: TutorApp []=[
         email: "IrmaG@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 20,
@@ -188,7 +199,7 @@ export const tutorMock: TutorApp []=[
         email: "w.Tailor@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 21,
@@ -197,7 +208,7 @@ export const tutorMock: TutorApp []=[
         email: "AndreaG@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 22,
@@ -206,7 +217,7 @@ export const tutorMock: TutorApp []=[
         email: "jesusO@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 23,
@@ -215,7 +226,7 @@ export const tutorMock: TutorApp []=[
         email: "CRizo@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 24,
@@ -224,7 +235,7 @@ export const tutorMock: TutorApp []=[
         email: "Messi@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 25,
@@ -233,7 +244,7 @@ export const tutorMock: TutorApp []=[
         email: "RonaldinhoG@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 26,
@@ -242,7 +253,7 @@ export const tutorMock: TutorApp []=[
         email: "Ramon@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 27,
@@ -251,7 +262,7 @@ export const tutorMock: TutorApp []=[
         email: "GersonC@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 28,
@@ -260,7 +271,7 @@ export const tutorMock: TutorApp []=[
         email: "KeilynL@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 29,
@@ -269,7 +280,7 @@ export const tutorMock: TutorApp []=[
         email: "DiegoTc@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 30,
@@ -278,7 +289,7 @@ export const tutorMock: TutorApp []=[
         email: "JeffryHercules@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 31,
@@ -287,7 +298,7 @@ export const tutorMock: TutorApp []=[
         email: "Cendy.Rivas@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 32,
@@ -296,7 +307,7 @@ export const tutorMock: TutorApp []=[
         email: "Maicol@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 33,
@@ -305,7 +316,7 @@ export const tutorMock: TutorApp []=[
         email: "MMarlo@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 34,
@@ -314,7 +325,7 @@ export const tutorMock: TutorApp []=[
         email: "Steven@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 35,
@@ -323,7 +334,7 @@ export const tutorMock: TutorApp []=[
         email: "Donato@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 36,
@@ -332,7 +343,7 @@ export const tutorMock: TutorApp []=[
         email: "evan.c@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 37,
@@ -341,7 +352,7 @@ export const tutorMock: TutorApp []=[
         email: "StephanieA@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 38,
@@ -350,7 +361,7 @@ export const tutorMock: TutorApp []=[
         email: "ACanales@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 39,
@@ -359,7 +370,7 @@ export const tutorMock: TutorApp []=[
         email: "zava@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 40,
@@ -368,7 +379,7 @@ export const tutorMock: TutorApp []=[
         email: "Carlitos@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 41,
@@ -377,7 +388,7 @@ export const tutorMock: TutorApp []=[
         email: "KAcosta@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 42,
@@ -386,7 +397,7 @@ export const tutorMock: TutorApp []=[
         email: "DarioBrizo@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 43,
@@ -395,7 +406,7 @@ export const tutorMock: TutorApp []=[
         email: "MinellyC@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 44,
@@ -404,7 +415,7 @@ export const tutorMock: TutorApp []=[
         email: "KatherineB@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 45,
@@ -413,7 +424,7 @@ export const tutorMock: TutorApp []=[
         email: "SteveS@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 46,
@@ -422,7 +433,7 @@ export const tutorMock: TutorApp []=[
         email: "jg@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 47,
@@ -431,7 +442,7 @@ export const tutorMock: TutorApp []=[
         email: "mjose@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 48,
@@ -440,7 +451,7 @@ export const tutorMock: TutorApp []=[
         email: "Bieber@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 49,
@@ -449,7 +460,7 @@ export const tutorMock: TutorApp []=[
         email: "carlosC@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
     {
         userId: 50,
@@ -458,6 +469,6 @@ export const tutorMock: TutorApp []=[
         email: "CarlosName@gmail.com",
         password: 'js',
         description: '',
-        workPlace: ''
+        workPlace: '', background: '', thumb: '',
     },
 ];

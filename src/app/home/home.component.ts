@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { User } from '../shared/model/user';
 import { UserService } from '../shared/user.service';
 import { ActivatedRoute } from '@angular/router';
-import { UserApp } from '../shared/model/user';
+import { UserApp, TutorApp } from '../shared/model/user';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   // Tweets:Array<User>;
   statusSideNav: boolean = true;
   usersList:Array<UserApp>;
+  tutorList:Array<TutorApp>;
   user:any;
   constructor(
     private userService: UserService, 
@@ -22,8 +23,11 @@ export class HomeComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     if (localStorage.getItem('users')) {
       let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
-      this.usersList = data[0] as Array<UserApp>;
+
+      // this.usersList = data[0].filter(f => f.typeUser==='student') as Array<UserApp>;
+      // this.tutorList = data[0].filter(f => f.typeUser==='tutor') as Array<TutorApp>;
       this.user = this.usersList.find(f => f.userId === Number(id));
+      
     } 
 
     console.log(this.user)

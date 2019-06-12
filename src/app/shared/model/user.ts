@@ -22,4 +22,6 @@ export class TutorApp {
     password: string;
     description: string;
     workPlace: string;
+    background: string;
+    thumb: string;
 }

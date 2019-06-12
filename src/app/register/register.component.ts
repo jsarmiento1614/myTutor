@@ -23,8 +23,11 @@ export class RegisterComponent implements OnInit {
 
     if (localStorage.getItem('users')) {
       let data: any = (new Function("return [" + localStorage.getItem('users') + "];")());
-      this.users = data[0] as Array<UserApp>;
-      this.tutor = data[0] as Array<TutorApp>;
+      this.users = data[0].filter(f => f.typeUser==='student') as Array<UserApp>;
+      this.tutor = data[0].filter(f => f.typeUser==='tutor') as Array<TutorApp>;
+
+      console.log("this is Student ->", this.users);
+      console.log("This is tutor ->",this.tutor);
     } else {
       this.users = userMock;
       this.tutor = tutorMock;
@@ -59,6 +62,8 @@ export class RegisterComponent implements OnInit {
       password: '',
       description: '',
       workPlace: '',
+      background: '',
+      thumb: '',
     };
   }
   onCreateUser(): void {
@@ -71,7 +76,11 @@ export class RegisterComponent implements OnInit {
       this.tutorNew.typeUser = this.typeUserSelected;
       this.tutorNew.userId = this.tutor.length + 1;
       this.tutor.push(this.tutorNew);
-    }
+    } 
+
+    this.tutor.forEach(item => {
+      this.users.push(item);
+    });
 
     // Guardo el objeto como un string
     localStorage.setItem('users', JSON.stringify(this.users));

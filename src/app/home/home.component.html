@@ -38,7 +38,7 @@ color: white; z-index: 1;"></i>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="content">
+          <div class="content" style="text-align: center;">
             <h2>Bienvenido a My Tutor</h2>
             <p>Somos una plataforma de educacion Online, brindando solucion a tus dudas a través de tutorias.</p>
           </div>
@@ -54,8 +54,8 @@ color: white; z-index: 1;"></i>
           <div class="box">
             <i class="fa fa-envelope fa-fw bg-primary"></i>
             <div class="info">
-              <h3>1,245</h3> <span>Emails</span>
-              <p>Lorem ipsum dolor sit amet</p>
+              <h3>1,245</h3> <span>Chat</span>
+              <p>Contáctate con tus tutores</p>
             </div>
           </div>
         </div>
@@ -63,8 +63,8 @@ color: white; z-index: 1;"></i>
           <div class="box">
             <i class="fa fa-file fa-fw danger"></i>
             <div class="info">
-              <h3>34</h3> <span>Projects</span>
-              <p>Lorem ipsum dolor sit amet</p>
+              <h3>1,900</h3> <span>Asignaturas</span>
+              <p>Encuentra solucion a tus problemas</p>
             </div>
           </div>
         </div>
@@ -72,8 +72,30 @@ color: white; z-index: 1;"></i>
           <div class="box">
             <i class="fa fa-users fa-fw success"></i>
             <div class="info">
-              <h3>5,245</h3> <span>Users</span>
-              <p>Lorem ipsum dolor sit amet</p>
+              <h3>5,245</h3> <span>Tutores</span>
+              <p>Encuentra al tutor de tu preferencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngFor="let tutor of tutorList">
+    <div class="container p-2" style="color: black;" >
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4" style="    width: 16%;
+          display: flex;
+          align-items: center;
+          margin-right: 3%;">
+            <img src="https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png" class="card-img">
+          </div>
+          <div class="col-md-8" style="width: 80%;">
+            <div class="card-body">
+              <h5 class="card-title">{{tutor.name}}</h5>
+              <p class="card-text">{{tutor.workPlace}}</p>
+              <button class="btn btn-primary p-1"> <i class="fas fa-envelope"></i> Contactar</button>
             </div>
           </div>
         </div>
